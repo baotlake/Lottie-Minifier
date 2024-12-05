@@ -1,4 +1,6 @@
-# Astro Starter Kit: Basics
+# Lottie Minifier
+
+A tool to minify Lottie animations.
 
 ```sh
 npm create astro@latest -- --template basics

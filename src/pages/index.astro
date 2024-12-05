@@ -1,11 +1,77 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import { FeatureCards } from "../components/FeatureCards.tsx";
+import App from "../components/App.tsx";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <div class="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <div class="text-center mb-16">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">Lottie Minifier</h1>
+        <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+          Optimize your Lottie animations effortlessly with our advanced
+          compression tools. Reduce file size while preserving animation
+          quality, manage layers including watermark removal, and preview
+          changes in real-time — all processed securely on your local machine.
+        </p>
+      </div>
+
+      <div class="max-w-2xl mx-auto">
+        <App client:only />
+      </div>
+
+      <FeatureCards />
+
+      <div class="p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold mb-6 text-gray-800">Resources</h3>
+        <ul class="space-y-4 text-gray-600">
+          <li>
+            <a
+              href="https://airbnb.io/lottie/#/"
+              class="hover:text-blue-500 transition-colors duration-300"
+            >
+              Lottie for Android, iOS, Web, React Native, and Windows
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/airbnb/lottie-web"
+              class="hover:text-blue-500 transition-colors duration-300"
+            >
+              Lottie-web GitHub Repository
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/airbnb/lottie-android"
+              class="hover:text-blue-500 transition-colors duration-300"
+            >
+              Lottie-android GitHub Repository
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/airbnb/lottie-ios"
+              class="hover:text-blue-500 transition-colors duration-300"
+            >
+              Lottie-ios GitHub Repository
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://lottiefiles.com/plugins/after-effects"
+              class="hover:text-blue-500 transition-colors duration-300"
+            >
+              Lottie Files After Effects Plugin
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </Layout>
